@@ -1,0 +1,63 @@
+﻿@model IEnumerable<cafeteriaweb.Models.articulos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.costo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.existencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marcas.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proveedores.nombre_comercial)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.costo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.existencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.marcas.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proveedores.nombre_comercial)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

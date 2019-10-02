@@ -1,0 +1,66 @@
+﻿@model cafeteriaweb.Models.usuarios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>usuarios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.limite_credito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.limite_credito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_registro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_registro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipos_usuario.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipos_usuario.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
