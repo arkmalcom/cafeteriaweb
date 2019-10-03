@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="185e98c9201049b7af8bf087dea34b6e" Name="Diagram1">
+      <Diagram DiagramId="d10b9f56ddf340cc90690515b053d7de" Name="Diagram1">
         <EntityTypeShape EntityType="cafeteriaModel.articulos" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="cafeteriaModel.cafeterias" Width="1.5" PointX="8" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="cafeteriaModel.campus" Width="1.5" PointX="5.75" PointY="6.125" IsExpanded="true" />
@@ -12,9 +12,9 @@
         <EntityTypeShape EntityType="cafeteriaModel.facturas" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="cafeteriaModel.marcas" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="cafeteriaModel.proveedores" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="cafeteriaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="cafeteriaModel.tipos_usuario" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="cafeteriaModel.usuarios" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cafeteriaModel.database_firewall_rules" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="cafeteriaModel.FK_articulos_marcas" ManuallyRouted="false" />
         <AssociationConnector Association="cafeteriaModel.FK_articulos_proveedores" ManuallyRouted="false" />
         <AssociationConnector Association="cafeteriaModel.FK_facturas_articulos" ManuallyRouted="false" />
