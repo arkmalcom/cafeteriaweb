@@ -11,7 +11,8 @@ namespace cafeteriaweb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class proveedores
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +22,9 @@ namespace cafeteriaweb.Models
         }
     
         public int id { get; set; }
+        [Required(ErrorMessage="Ingresar nombre del proveedor.")]
         public string nombre_comercial { get; set; }
+        [Required(ErrorMessage="Ingresar RNC.")]
         public string RNC { get; set; }
         public System.DateTime fecha_registro { get; set; }
         public bool estado { get; set; }

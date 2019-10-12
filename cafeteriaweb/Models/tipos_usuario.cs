@@ -11,7 +11,8 @@ namespace cafeteriaweb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tipos_usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,7 @@ namespace cafeteriaweb.Models
         }
     
         public int id { get; set; }
+        [Required(ErrorMessage="Ingresar descripcion.")]
         public string descripcion { get; set; }
         public bool estado { get; set; }
     

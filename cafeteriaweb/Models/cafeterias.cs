@@ -11,12 +11,17 @@ namespace cafeteriaweb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class cafeterias
     {
         public int id { get; set; }
+        [Required(ErrorMessage = "Ingresar descripcion")]
+        [StringLength(100)]
         public string descripcion { get; set; }
+        [Required]
         public int id_campus { get; set; }
+        [Required(ErrorMessage= "Ingresar nombre de persona encargada")]
         public string encargado { get; set; }
         public bool estado { get; set; }
     

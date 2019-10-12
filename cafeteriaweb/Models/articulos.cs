@@ -11,7 +11,8 @@ namespace cafeteriaweb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class articulos
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,11 +22,25 @@ namespace cafeteriaweb.Models
         }
     
         public int id { get; set; }
+
+        [Required(ErrorMessage="Ingresar descripcion")]
+        [StringLength(50)]
         public string descripcion { get; set; }
+
+        [Required(ErrorMessage = "Ingresar marca")]
         public int id_marca { get; set; }
+
+        [Required(ErrorMessage = "Costo invalido")]
+        [Range(0,999999999.99)]
         public decimal costo { get; set; }
+
+        [Required(ErrorMessage = "Ingresar proveedor")]
         public int id_proveedor { get; set; }
+
+        [Required(ErrorMessage = "Cantidad invalida")]
+        [Range(0, 9999)]
         public int existencia { get; set; }
+
         public bool estado { get; set; }
     
         public virtual marcas marcas { get; set; }

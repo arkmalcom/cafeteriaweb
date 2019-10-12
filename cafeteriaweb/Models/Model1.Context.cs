@@ -34,5 +34,7 @@ namespace cafeteriaweb.Models
         public virtual DbSet<proveedores> proveedores { get; set; }
         public virtual DbSet<tipos_usuario> tipos_usuario { get; set; }
         public virtual DbSet<usuarios> usuarios { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

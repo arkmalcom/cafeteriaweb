@@ -11,7 +11,8 @@ namespace cafeteriaweb.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class usuarios
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +22,10 @@ namespace cafeteriaweb.Models
         }
     
         public int id { get; set; }
+        [Required(ErrorMessage="Ingresar nombre.")]
         public string nombre { get; set; }
+        [Required]
+        [RegularExpression("^\\d{3}-?\\d{7}-?[0-9]$", ErrorMessage = "Cedula invalida")]
         public string cedula { get; set; }
         public int id_tipo { get; set; }
         public decimal limite_credito { get; set; }
